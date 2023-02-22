@@ -123,7 +123,7 @@ public class Apuesta {
      * al saldo disponible
      * Este método se va a probar con Junit
      */
-
+ 
     void cobrar_apuesta(int cantidad_goles_local, int cantidad_goles_visit) throws Exception {
 
         if (comprobar_resultado(cantidad_goles_local, cantidad_goles_visit) == false) {
