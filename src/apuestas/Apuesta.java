@@ -4,7 +4,10 @@
  */
 package apuestas;
 
-
+/**
+ * 
+ * @author BORREGO
+ */
 public class Apuesta {
 
     private int dinero_disp;

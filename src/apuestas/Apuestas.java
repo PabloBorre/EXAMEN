@@ -4,7 +4,10 @@
  */
 package apuestas;
 
-
+/**
+ * 
+ * @author BORREGO
+ */
 public class Apuestas {
 
     public static void main(String[] args) {
