@@ -10,6 +10,54 @@ package apuestas;
  */
 public class Apuesta {
 
+    /**
+     * devuelve los goles del local
+     * @return the goles_local
+     */
+    public int getGoles_local() {
+        return goles_local;
+    }
+
+    /**
+     * recibe los goles del local
+     * @param goles_local the goles_local to set
+     */
+    public void setGoles_local(int goles_local) {
+        this.goles_local = goles_local;
+    }
+
+    /**
+     * devuelve los goles del visitantes
+     * @return the goles_visitante
+     */
+    public int getGoles_visitante() {
+        return goles_visitante;
+    }
+
+    /**
+     * recibe los goles del local
+     * @param goles_visitante the goles_visitante to set
+     */
+    public void setGoles_visitante(int goles_visitante) {
+        this.goles_visitante = goles_visitante;
+    }
+
+    /**
+     * devuelve las apuestas
+     * @return the apostado
+     */
+    public int getApostado() {
+        return apostado;
+    }
+
+    /**
+     * recibe las apuestas
+     * @param apostado the apostado to set
+     */
+    public void setApostado(int apostado) {
+        this.apostado = apostado;
+    }
+
     private int dinero_disp;
     private int goles_local;
     private int goles_visitante; 
@@ -46,12 +94,12 @@ public class Apuesta {
             throw new Exception("No se puede apostar menos de 1€");
         }
 
-        if (dinero > dinero_disp) {
+        if (dinero > getDinero_disp()) {
             throw new Exception("No se puede apostar mas de lo que tienes");
         }
         {
-            dinero_disp = dinero - dinero_disp;
-            apostado = dinero;
+            setDinero_disp(dinero - getDinero_disp());
+            setApostado(dinero);
         }
     }
     /*Método que comprueba si se ha acertado el resultado del partido
@@ -65,7 +113,7 @@ public class Apuesta {
             throw new Exception("Un equipo no puede meter menos de 0 goles, por malo que sea");
         }
 
-        if (goles_local == local && goles_visitante == visitante) {
+        if (getGoles_local() == local && getGoles_visitante() == visitante) {
             acertado = true;
         }
         return acertado;
@@ -81,7 +129,7 @@ public class Apuesta {
         if (comprobar_resultado(cantidad_goles_local, cantidad_goles_visit) == false) {
             throw new Exception("No se puede cobrar una apuesta no acertada");
         }
-        dinero_disp = dinero_disp * 10;
+        setDinero_disp(getDinero_disp() * 10);
 
     }
 }
