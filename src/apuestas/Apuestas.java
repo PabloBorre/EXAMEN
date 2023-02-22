@@ -27,8 +27,8 @@ public class Apuestas {
      */
     public static void operativa_Apuesta(Apuesta laApuesta) {
         int dinero;
-        
-        try {
+         
+        try { 
             System.out.println("Apostando...");
             laApuesta.apostar(25);
         } catch (Exception e) {
