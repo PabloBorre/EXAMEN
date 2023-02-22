@@ -5,7 +5,7 @@
 package apuestas;
 
 /**
- * 
+ * El main hace que la apuesta se lleve a cabo
  * @author BORREGO
  */
 public class Apuestas {
@@ -22,7 +22,8 @@ public class Apuestas {
 
     
     /**
-     * Con est emetodo se realiza una apuesta
+     * Con este emetodo se realiza una apuesta y se ve cuales son los resultados
+     * de la misma
      * @param laApuesta Es la auesta que se ha realizado
      */
     public static void operativa_Apuesta(Apuesta laApuesta) {
