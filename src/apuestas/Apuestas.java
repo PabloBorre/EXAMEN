@@ -22,7 +22,7 @@ public class Apuestas {
             System.out.println("Fallo al realizar la Apuesta");
         }
 
-        try {
+        try {  
             System.out.println("Intento cobrar apuesta segun el resultado del partido");
             miApuesta.cobrar_apuesta(2, 3);
         } catch (Exception e) {

@@ -12,12 +12,12 @@ public class Apuesta {
 
     private int dinero_disp;
     private int goles_local;
-    private int goles_visitante;
+    private int goles_visitante; 
     private int apostado;
 
     /*Contructor por defecto*/
     public Apuesta() {
-    }
+    } 
 
     /*Contructor por parámetros*/
     public Apuesta(int dinero_disp, int goles_local, int goles_visitante) {
